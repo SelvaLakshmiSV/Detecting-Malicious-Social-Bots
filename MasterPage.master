@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head  runat="server">
+<title>Detecting Malicious Social Bots Based
+on Clickstream Sequences</title>
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/color/red.css" media="all">
+<link rel="stylesheet" type="text/css" media="screen" href="style/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="style/type/museo.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/type/ptsans.css" media="all">
+<link rel="stylesheet" type="text/css" href="style/type/charis.css" media="all">
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all">
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all">
+<![endif]-->
+<script src="style/js/jquery-1.6.2.min.js"></script>
+<script src="style/js/ddsmoothmenu.js"></script>
+<script src="style/js/transify.js"></script>
+<script src="style/js/jquery.aw-showcase.js"></script>
+<script src="style/js/jquery.jcarousel.js"></script>
+<script src="style/js/carousel.js"></script>
+<script src="style/js/jquery.prettyPhoto.js"></script>
+<script src="style/js/jquery.superbgimage.min.js"></script>
+<script src="style/js/jquery.slickforms.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.forms').dcSlickForms();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#showcase").awShowcase({
+            content_width: 900,
+            content_height: 400,
+            auto: true,
+            interval: 3000,
+            continuous: false,
+            arrows: true,
+            buttons: true,
+            btn_numbers: true,
+            keybord_keys: true,
+            mousetrace: false,
+            /* Trace x and y coordinates for the mouse */
+            pauseonover: true,
+            stoponclick: false,
+            transition: 'fade',
+            /* hslide/vslide/fade */
+            transition_delay: 0,
+            transition_speed: 500,
+            show_caption: 'onload'
+            /* onload/onhover/show */
+        });
+    });
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="thumbs"> <a href="style/images/art/bg3.jpg">1</a> <a href="style/images/art/bg3.jpg">2</a> <a href="style/images/art/bg3.jpg">3</a> <a href="style/images/art/bg3.jpg">4</a> <a href="style/images/art/bg3.jpg">5</a> <a href="style/images/art/bg3.jpg">6</a> </div>
+<div id="superbgimage">
+  <div class="scanlines"></div>
+</div>
+<div id="wrapper">
+  <div id="header">
+    <div class="logo opacity"><h1 style ="color :White ; font-size :xx-large ; text-transform :none ;  line-height :50px;  ">Detecting Malicious Social Bots Based
+on Clickstream Sequences</h1></div>
+    <!--<div class="social">
+      <ul>
+        <li><a href="#"><img src="style/images/icon-rss.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-twitter.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-googleplus.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-dribble.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-flickr.png" alt=""></a></li>
+        <li><a href="#"><img src="style/images/icon-tumblr.png" alt=""></a></li>
+      </ul>
+    </div>-->
+  </div>
+  <div class="clear"></div>
+  <%--<div id="menu" class="menu opacity">
+  <br />
+     
+
+    <br style="clear: left">
+  </div>--%>
+  <div id="container" class="opacity">
+    <div id="showcase" class="showcase">
+      <div class="showcase-slide">
+        <div class="showcase-content"> <img src="style/images/art/img5.jpg" alt="" width ="900" height ="400"></div>
+      </div>
+      <div class="showcase-slide">
+        <div class="showcase-content"> <img src="style/images/art/img2.jpg" alt="" width ="900" height ="400"> </div>
+        <div class="showcase-caption">  </div>
+      </div>
+      <div class="showcase-slide">
+        <div class="showcase-content"> <img src="style/images/art/img5.jpg" alt="" width ="900" height ="400"></div>
+      </div>
+      <div class="showcase-slide">
+        <div class="showcase-content"> <img src="style/images/art/img3.jpg" alt="" width ="900" height ="400"> </div>
+        <div class="showcase-caption"> </div>
+      </div>
+    </div>
+    <div>
+        <%--<div style ="float :right ;">
+            </div>--%>
+<table border="0" width ="70%" align="center" style ="border-left :0px; border-bottom :0px; border-top :0px; border-right :0px; " >
+    <tr>
+    <td  >
+    <br />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Visible="False" Font-Bold="True">
+             <Items>
+                <asp:MenuItem NavigateUrl="~/Homepage.aspx" Text="Homepage" Value="Homepage">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AdminLogin.aspx" Text="Admin Login" 
+                    Value="Admin Login"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Login.aspx" Text="User Login" Value="User Login">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="95px" />
+        </asp:Menu>
+    
+        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Font-Bold="True" Visible="False">
+            <DynamicMenuItemStyle HorizontalPadding="35px" />
+            <Items>
+                <asp:MenuItem Text="Image Creation" 
+                    Value="Image Creation">
+                    <asp:MenuItem NavigateUrl="~/AdminCreateImage.aspx" Text="New Image Creation" 
+                        Value="New Image Creation"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AdminSetParameters.aspx" Text="Set Parameter" 
+                        Value="Set Parameter"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Group Creation" Value="Group Creation">
+                    <asp:MenuItem NavigateUrl="~/AdminCreateGroup.aspx" Text="Create New Group" 
+                        Value="Create New Group"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AdminViewGroupDetails.aspx" 
+                        Text="View Group Details" Value="View Group Details"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="View User" Value="View User">
+                    <asp:MenuItem NavigateUrl="~/AdminViewUserDetails.aspx" 
+                        Text="View User Details" Value="View User Details"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AdminViewFriendDetails.aspx" 
+                        Text="Friends Details" Value="Friends Details"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="View Post" Value="View Post">
+                    <asp:MenuItem NavigateUrl="~/AdminViewUserBasedPostDetails.aspx" 
+                        Text="User Based Post Details" Value="User Based Post Details">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AdminViewBotBasedPostDetails.aspx" 
+                        Text="Bot Based Post Details" Value="Bot Based Post Details"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Homepage.aspx" Text="Logout" Value="Logout">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="35px" />    </asp:Menu>
+    
+        <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Visible="False" Font-Bold="True">
+            <DynamicMenuItemStyle HorizontalPadding="35px" />
+            <Items>
+                <asp:MenuItem Text="Profile" Value="Profile" 
+                    NavigateUrl="~/UserViewProfile.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text=" Friends" 
+                    Value=" Friends">
+                    <asp:MenuItem NavigateUrl="~/SearchFriends.aspx" Text="Search Friends" 
+                        Value="Search Friends"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ViewFriendsRequest.aspx" 
+                        Text="View Friends Request" Value="View Friends Request"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ViewFriendsList.aspx" Text="View Friends List" 
+                        Value="View Friends List"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/UserAddGroup.aspx" Text="Join Group" 
+                    Value="Join Group">
+                </asp:MenuItem>
+                <asp:MenuItem Text="Post" 
+                    Value="Post">
+                    <asp:MenuItem NavigateUrl="~/UserSendPost.aspx" Text="User Send Post" 
+                        Value="User Send Post"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ViewPost.aspx" Text="View Post" Value="View Post">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/UserViewBotBasedPostDetails.aspx" Text="Bot  Post" 
+                        Value="Bot  Post"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/UserViewMyPost.aspx" Text="View My Post" 
+                        Value="View My Post"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Message" Value="Message">
+                    <asp:MenuItem NavigateUrl="~/SendMessage1.aspx" Text="Send Message" 
+                        Value="Send Message"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ViewMessage.aspx" Text="View Message" 
+                        Value="View Message"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MessageSendToGroup.aspx" 
+                        Text="Message Send to Group" Value="Message Send to Group"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/ViewGroupMessage.aspx" Text="View Group Message" 
+                        Value="View Group Message"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Homepage.aspx" Text="Logout" Value="Logout">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="35px" />
+        </asp:Menu>
+    
+        <br />
+    
+    </td>
+    </tr>
+    
+   <%-- <tr>
+    <td  >
+    
+        &nbsp;</td>
+    </tr>
+    
+    <tr>
+    <td  >
+    
+        &nbsp;</td>
+    </tr>
+    
+    <tr>
+    <td  >
+    
+        &nbsp;</td>
+    </tr>
+   --%> 
+    </table>
+    </div>
+    <div class="hr2"></div>
+    <br>
+    <br>
+
+        <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <br>
+    <div class="clear"></div>
+    <div class="hr1"></div>
+  </div>
+  <div id="copyright" class="opacity">
+    <p>&nbsp;</p>
+  </div>
+</div>
+<script src="style/js/scripts.js"></script>
+    </form>
+</body>
+</html>

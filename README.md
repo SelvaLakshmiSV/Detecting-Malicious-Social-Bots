@@ -1,3 +1,4 @@
+[Detecting Malcious bots final ppt.pptx](https://github.com/SelvaLakshmiSV/Detecting-Malicious-Social-Bots/files/6926019/Detecting.Malcious.bots.final.ppt.pptx)
 # DetectingMaliciousSocialBots
 
 ## Home page
